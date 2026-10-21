@@ -83,6 +83,16 @@ any change. Do not include spaces before or after a variable name.
 
 ## Shopify Setup Guide (Obtaining API Credentials)
 
+### Order period endpoints
+
+The dashboard exposes convenience endpoints for common Asia/Kolkata reporting periods. They return the same analytics payload as `/api/orders` and accept the same optional `storeId`, `productId`, and `refresh` query parameters:
+
+- `GET /api/orders/today`
+- `GET /api/orders/yesterday`
+- `GET /api/orders/this-month`
+
+`this-month` covers the first day of the current month through today.
+
 The settings form uses Shopify's current **Dev Dashboard client credentials** flow:
 
 1. Open the [Shopify Dev Dashboard](https://dev.shopify.com/dashboard) and select the
